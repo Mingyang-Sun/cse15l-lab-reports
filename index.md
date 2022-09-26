@@ -1,4 +1,4 @@
-[Lab Report 1](https://github.com/Mingyang-Sun/cse15l-lab-reports/edit/main/index.md)
+[Lab Report 1](lab-report-1-week-0.html)
 
 
 Hello, world!
