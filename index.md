@@ -1,3 +1,6 @@
+[Lab Report 1](https://github.com/Mingyang-Sun/cse15l-lab-reports/edit/main/index.md)
+
+
 Hello, world!
 
 *italic*
