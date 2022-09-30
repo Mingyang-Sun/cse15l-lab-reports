@@ -1,1 +1,1 @@
-![Image](2022-09-25%2020.34.36.png)
+![Image](lab%20report%200.png)
