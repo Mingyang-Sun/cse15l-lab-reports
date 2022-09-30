@@ -1,4 +1,7 @@
-[Lab Report 1](lab-report-1-week-0.html)
+[Lab Report 1](Lab Report 1 - Remote Access and Filesystem.html)
+[Lab Report 0](lab-report-1-week-0.html)
+
+
 
 
 Hello, world!
