@@ -39,8 +39,8 @@
 ![Image](lab%20report%201%205.2.png)
 
 ## Part 6 Optimizing Remote Running
-1. First I made a local edit to WhereAmI.java in my desktop directory, and compiled and ran it again with new outputs displayed.
+1. First I made a local edit to WhereAmI.java in my desktop directory, and compiled and ran it again with new outputs displayed. Then I used the scp command to copy the WhereAmI.java files to the remote server.
 ![Image](lab%20report%201%206.1.png)
 
-2. Then I used the scp command to copy the WhereAmI.java files to the remote server. Lastly, I compiled and ran the WhereAmI.java file that is on the remote server without logging into my remote server.
+2. Lastly, I compiled and ran the WhereAmI.java file that is on the remote server without logging into my remote server.
 ![Image](lab%20report%201%206.2.png)
