@@ -28,7 +28,7 @@
 1. In order to copy files back and forth between your local and remote computers, you could utilize the command “scp” to transfer your files. As you can see, I created a file called WhereAmI.java on my computer’s desktop using a terminal, put in some java code, and compiled and ran it on my terminal with some displays of my system information.
 ![Image](lab%20report%201%204.1.png)
 
-2. Then in the directory where I created that java file, I used the command “scp <file> <destination>” to transfer the file of “WhereAmI.java” to the destination “cs15lfa22cv@ieng6.ucsd.edu:~/” which is my remote computer. After utilizing the scp command, I logged back to my remote server, and with the command ls, you can see that the file WhereAmI.java is shown in my remote server’s directory.  
+2. Then in the directory where I created that java file, I used the command “scp <file> <destination>” to transfer the file of “WhereAmI.java” to the destination “cs15lfa22cv@ieng6.ucsd.edu:~/” which is my remote computer. After utilizing the scp command, I logged back to my remote server, and with the command ls, you can see that the file WhereAmI.java is shown in my remote server’s directory.
 ![Image](lab%20report%201%204.2.png)
 
 ## Part 5 Setting an SSH Key
