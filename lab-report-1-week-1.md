@@ -22,7 +22,7 @@
 ![Image](lab%20report%201%203.1.png)
 
 2. In line 71, a “cd <path>” command is used to switch from the current working directory to where the destination could be placed in the <path>. In line 72, the “cd ~” command is used to navigate back to my home directory. In line 74, the command “cd ..” is used to navigate back to the previous working directory. In line 75, the command “pwd” stands for print working directory. In line 76, the command “cp <path>” is used to make a copy of the file in <path> to your current working directory.
-![Image](lab%20report%201%203.2.png)
+![Image](lab_report_1_3.2.png)
 ![Image](lab%20report%201%203.2.png)
 
 ## Part 4 Moving Files with scp
@@ -30,7 +30,7 @@
 ![Image](lab%20report%201%204.1.png)
 
 2. Then in the directory where I created that java file, I used the command “scp <file> <destination>” to transfer the file of “WhereAmI.java” to the destination “cs15lfa22cv@ieng6.ucsd.edu:~/” which is my remote computer. After utilizing the scp command, I logged back to my remote server, and with the command ls, you can see that the file WhereAmI.java is shown in my remote server’s directory.
-![Image](lab%20report%201%204.2.png)
+![Image](lab_report_1_4.2.png)
 ![Image](lab%20report%201%204.2.png)
 
 ## Part 5 Setting an SSH Key
