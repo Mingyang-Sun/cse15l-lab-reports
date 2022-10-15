@@ -101,3 +101,28 @@ At this point, the list field would have two strings “apple” and “pineappl
 By the time request is done processing, the values of the relevant fields of the class would remain what has been assigned during this request. However, if another request has been called, those values would be changed based on new inputs and requests.
 
 ## Part 2 Bugs and Symptoms:
+### Bug 1: static int[] reversed(int[] arr) method in ArrayExamples.java
+Original Code:![Image](images/Lab%20Report%202%202.1.png)
+Fixed Code:![Image](images/Lab%20Report%202%202.2.png)
+
+I used an integer array of {1, 2, 3, 4, 5} as my failure-inducing input for the test.
+
+The expected output with respect to my input should be an integer array of {5, 4, 3, 2, 1}. 
+However, the actual output or the symptom with respect to my input was an empty integer array of size 0.
+
+One of the bugs or problems in the code of the static int[] reversed(int[] arr) method was the output of this method.
+
+The output of this method was supposed to be returning a reversed array which has a variable name of newArray in the case, but the actual return of the reverse method is the original array that passed as a parameter, which would cause the tests to be failed.
+
+### Bug 2: static List<String> filter(List<String> list, StringChecker sc) method in ListExamples.java
+Original Code:![Image](images/Lab%20Report%202%202.3.png)
+Fixed Code:![Image](images/Lab%20Report%202%202.4.png)
+
+I used a string ArrayList that contains elements {“a”, “apple”, “b”, “banana”, “c”, “carrot”} as my failure-inducing input for the test.
+
+The expected output with respect to my input should be a string ArrayList of {“apple”, “banana”, “carrot”} since my filter uses a string checker that checks whether the string has a length that is greater than 1.
+However, the actual output or the symptom with respect to my input was a string ArrayList that has elements in the order of {“carrot”, ”banana”, ”apple”}.
+
+The bug or problem in the code of the static List<String> filter(List<String> list, StringChecker sc) method is the use of add method of ArrayList. 
+
+It was supposed to add the strings as the last element of the ArrayList which should use the add method of add(E element). However, the actual add method used in the filter method was the add method of add(int index, E element), and it sets the index as 0 in the case, which would continuously add the element to the front and cause the actual returning ArrayList has a reverse order of elements compared to the expected.
