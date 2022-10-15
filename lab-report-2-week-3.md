@@ -103,6 +103,7 @@ By the time request is done processing, the values of the relevant fields of the
 ## Part 2 Bugs and Symptoms:
 ### Bug 1: static int[] reversed(int[] arr) method in ArrayExamples.java
 Original Code:![Image](images/Lab%20Report%202%202.1.png)
+
 Fixed Code:![Image](images/Lab%20Report%202%202.2.png)
 
 I used an integer array of {1, 2, 3, 4, 5} as my failure-inducing input for the test.
@@ -116,6 +117,7 @@ The output of this method was supposed to be returning a reversed array which ha
 
 ### Bug 2: static List<String> filter(List<String> list, StringChecker sc) method in ListExamples.java
 Original Code:![Image](images/Lab%20Report%202%202.3.png)
+
 Fixed Code:![Image](images/Lab%20Report%202%202.4.png)
 
 I used a string ArrayList that contains elements {“a”, “apple”, “b”, “banana”, “c”, “carrot”} as my failure-inducing input for the test.
