@@ -107,6 +107,7 @@ Original Code:![Image](images/Lab%20Report%202%202.1.png)
 Fixed Code:![Image](images/Lab%20Report%202%202.2.png)
 
 I used an integer array of {1, 2, 3, 4, 5} as my failure-inducing input for the test.
+![Image](images/Lab%20Report%202%202.5.png)
 
 The expected output with respect to my input should be an integer array of {5, 4, 3, 2, 1}. 
 However, the actual output or the symptom with respect to my input was an empty integer array of size 0.
@@ -121,6 +122,7 @@ Original Code:![Image](images/Lab%20Report%202%202.3.png)
 Fixed Code:![Image](images/Lab%20Report%202%202.4.png)
 
 I used a string ArrayList that contains elements {“a”, “apple”, “b”, “banana”, “c”, “carrot”} as my failure-inducing input for the test.
+![Image](images/Lab%20Report%202%202.6.png)
 
 The expected output with respect to my input should be a string ArrayList of {“apple”, “banana”, “carrot”} since my filter uses a string checker that checks whether the string has a length that is greater than 1.
 However, the actual output or the symptom with respect to my input was a string ArrayList that has elements in the order of {“carrot”, ”banana”, ”apple”}.
