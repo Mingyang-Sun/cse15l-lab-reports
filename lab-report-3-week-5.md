@@ -1,10 +1,10 @@
 # Lab Report 3 - Week 5
 
-## grep -i
+## ```grep -i```
 Syntax:<br />
-grep -i «string» «files»
+```grep -i «string» «files»```
 
-This -i option of the grep command searches a file or files for the given string case-insensitively, which will match all the cases of the words and print matching lines.
+This -i option of the grep command searches a file or files for the given string case-insensitively, which will match all the cases of the words and print matching lines. The grep command performs a case-sensitive search by default, so this will be very useful when you want to perform a search that ignores the cases since it will produce a very different output compared to a case-sensitive search.
 
 ### Example 1.
 ```
@@ -38,7 +38,7 @@ technical/911report/chapter-13.5.txt:                ground floors, see PAPD int
 technical/911report/chapter-13.5.txt:                Terminal Command (Nov. 6, 2004); NYPD interview 10, ESU (Mar. 1, 2004); FDNY
 technical/911report/chapter-13.5.txt:                interview 4, Port Authority Bus Terminal Command (Nov. 20, 2003).
 ```
-This "grep -i "Terminal" technical/911report/*" command performs a case-insensitive search on string "Terminal" in all files within the technical/911report path.
+This ```grep -i "Terminal" technical/911report/*``` command performs a case-insensitive search on string "Terminal" in all files within the technical/911report path. Without the use of the -i option, the result of this grep command will not include those files that have the lowercase terminal word.
 
 ### Example 2.
 ```
@@ -57,7 +57,7 @@ mingyangsun03@nuanyang docsearch % grep -i "Scientific" technical/plos/journal.p
         become more established, however, and as the benefits of open access to scientific and
         for any scientific society to take—and PLoS welcomes the questions, comments, and feedback
 ```
-This "grep -i "Scientific" technical/plos/journal.pbio.0020156.txt" command performs a case-insensitive search on string "Scientific" in the file journal.pbio.0020156.txt within the path technical/plos.
+This ```grep -i "Scientific" technical/plos/journal.pbio.0020156.txt``` command performs a case-insensitive search on string "Scientific" in the file journal.pbio.0020156.txt within the path technical/plos. Without the use of the -i option, the result of this grep command will not include those files that have the lowercase scientific word.
 
 ### Example 3.
 ```
@@ -110,13 +110,13 @@ National Legal Aid and Defender Association and the Management
 Legal Affairs and the Office of Information Management, with the
 legal services. As part of this project, LSC solicited public
 ```
-This "grep -i "LEGAL" technical/plos/journal.pbio.0020156.txt" command performs a case-insensitive search on string "LEGAL" in the file Comments_on_semiannual.txt within the path technical/government/About_LSC.
+This ```grep -i "LEGAL" technical/plos/journal.pbio.0020156.txt``` command performs a case-insensitive search on string "LEGAL" in the file Comments_on_semiannual.txt within the path technical/government/About_LSC. Without the use of the -i option, the result of this grep command will only include those files that have the exact uppercase LEGAL word.
 
-## grep -l
+## ```grep -l```
 Syntax:<br />
-grep -l «string» «files»
+```grep -l «string» «files»```
 
-This -l option of the grep command searches a file or files for the given string, but only prints the names of files that contain the matched string instead of printing all the matching lines.
+This -l option of the grep command searches a file or files for the given string, but only prints the names of files that contain the matched string instead of printing all the matching lines. This -l option of the grep command is very useful when you just trying to look for the files containing the string words that you are searching for because only the names of files containing selected lines are written to standard output by using this command option.
 
 ### Example 1.
 ```
@@ -196,7 +196,7 @@ technical/biomed/gb-2002-3-6-research0029.txt
 technical/biomed/gb-2003-4-4-r24.txt
 technical/biomed/rr196.txt
 ```
-This "grep -l "base pair" technical/biomed/*" command displays the name of the files in technical/biomed that contain the string "base pair".
+This ```grep -l "base pair" technical/biomed/*``` command displays the name of the files in technical/biomed that contain the string "base pair". Without the use of the -l option, the output of this grep command will be all the lines in those files that contain the string base pair.
 
 ### Example 2.
 ```
@@ -211,7 +211,7 @@ technical/911report/chapter-3.txt
 technical/911report/chapter-8.txt
 technical/911report/chapter-9.txt
 ```
-This "grep -l "Report" technical/911report/*" command displays the name of the files in technical/911report that contain the string "Report".
+This ```grep -l "Report" technical/911report/*``` command displays the name of the files in technical/911report that contain the string "Report".  Without the use of the -l option, the output of this grep command will be all the lines in those files that contain the string report.
 
 ### Example 3.
 ```
@@ -234,13 +234,13 @@ technical/911report/chapter-8.txt
 technical/911report/chapter-9.txt
 technical/911report/preface.txt
 ```
-This "grep -l -i "Report" technical/911report/*" command displays the name of the files in technical/911report that contain the string "Report" case-insensitively because using the -i option allows the grep command to perform a case-insensitive search.
+This ```grep -l -i "Report" technical/911report/*``` command displays the name of the files in technical/911report that contain the string "Report" case-insensitively because using the -i option allows the grep command to perform a case-insensitive search. Command line options can be used together, with the use of these two commands, the output is just the file names that contain the string Report ignoring cases.
 
-## grep -r
+## ```grep -r```
 Syntax:<br />
-grep -r «string» «directory»
+```grep -r «string» «directory»```
 
-This -r option of the grep command searches all files recursively for the given string, which allows searching in all the files under the current directory and its subdirectories.
+This -r option of the grep command searches all files recursively for the given string, which allows searching in all the files under the current directory and its subdirectories. The grep command only allows searching for the given string in one or multiple files by default, so this command is very useful when you want to search all the files within a directory and its subdirectories.
 
 ### Example 1.
 ```
@@ -249,7 +249,7 @@ technical/plos/journal.pbio.0020145.txt:        to do literature searches for th
 technical/biomed/1477-7827-1-54.txt:        Our lab reported a significant increase of Spam1 in
 technical/biomed/1471-2156-2-17.txt:          pathology lab report, disease progression and
 ```
-This "grep -r "lab report" technical" command searches for the given string "lab report" recursively in all files within the directory technical.
+This ```grep -r "lab report" technical``` command searches for the given string "lab report" recursively in all files within the directory technical. Without the use of the -r option, the grep command will not execute because technical is a directory.
 
 ### Example 2.
 ```
@@ -288,7 +288,7 @@ technical/biomed/1471-2296-3-3.txt
 technical/biomed/1472-6947-1-5.txt
 technical/biomed/1476-069X-2-9.txt
 ```
-This "grep -r -l "Report" technical/biomed" command searches for the given string "Report" recursively in all files within the path technical/biomed, and prints out the name of the files that contain "Report" due to the use of -l option.
+This ```grep -r -l "Report" technical/biomed``` command searches for the given string "Report" recursively in all files within the path technical/biomed, and prints out the name of the files that contain "Report" due to the use of -l option. Without the use of the -r option, the grep command will not execute because technical/biomed is a directory.
 
 ### Example 3.
 ```
@@ -375,4 +375,4 @@ technical/government/Media/Crains_New_York_Business.txt
 technical/government/Media/residents_sue_city.txt
 technical/government/Media/Farm_workers.txt
 ```
-This "grep -r -l -i "ENVIRONMENT" technical/government" command searches for the given string "ENVIRONMENT" case-insensitively and recursively in all files within the path technical/government, and prints out the name of the files that contain "ENVIRONMENT".
+This ```grep -r -l -i "ENVIRONMENT" technical/government``` command searches for the given string "ENVIRONMENT" case-insensitively and recursively in all files within the path technical/government, and prints out the name of the files that contain "ENVIRONMENT". Without the use of the -r option, the grep command will not execute because technical/government is a directory.
