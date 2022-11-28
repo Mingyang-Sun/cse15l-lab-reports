@@ -76,13 +76,13 @@ which has the methods corrected
 
 rm -rf student-submission
 ```
-The ```rm -rf``` command is used to remove the previous student-submission directory.
+The ```rm -rf``` command is used to remove the previous ```student-submission``` directory.
 
 ```
 git clone $1 student-submission
 echo 'Finished cloning'
 ```
-The ```git clone``` command is used to clone the student submission where the URL is taken in as parameter $1 and stored in a new directory called student-submission. The ```echo``` command prints out Finished cloning to the terminal.
+The ```git clone``` command is used to clone the student submission where the URL is taken in as the parameter $1 and stored in a new directory called ```student-submission```. The ```echo``` command prints out ```Finished cloning``` to the terminal.
 
 ```
 cp TestListExamples.java student-submission
@@ -90,7 +90,7 @@ cp -R lib student-submission
 
 cd student-submission
 ```
-The ```cp``` command copies the file TestListExample.java into the directory we just cloned. The ```cp -R``` command copies the directory lib into the directory we just cloned. The ```cd``` command changes the current working directory to student-submission.
+The ```cp``` command copies the file ```TestListExample.java``` into the directory we just cloned. The ```cp -R``` command copies the directory ```lib``` into the directory we just cloned. The ```cd``` command changes the current working directory to ```student-submission```.
 
 ```
 if [[ -e ListExamples.java ]]
@@ -101,12 +101,12 @@ else
   exit 1
 fi
 ```
-The if condition ```[[ -e ListExamples.java ]]```in the first line is evaluated to be true in the case, since ```-e``` checks if the following file exists while the file ListExamples.java does exist in the student-submission. Therefore the if statement goes into the then statement block in the second line. Then the ```javac``` command in the third line compiles all .java files and redirects the stderr to error.txt by the command ```2> error.txt```. The fifth and sixth line in the else statement block does not run because the if condition in the first line was evaluated to be true.
+The if condition ```[[ -e ListExamples.java ]]```in the first line is evaluated to be true in the case, since ```-e``` checks if the following file exists while the file ListExamples.java does exist in the student-submission. Therefore the if statement goes into the then statement block in the second line. Then the ```javac``` command in the third line compiles all ```.java``` files and redirects the stderr to ```error.txt``` by the command ```2> error.txt```. The fifth and sixth line in the else statement block does not run because the if condition in the first line was evaluated to be true.
 
 ```
 [ -s error.txt ]
 ```
-The ```[ -s error.txt ]``` command in the first line checks whether the size of error.txt is > 0 bytes, if it is true then its return code would be 0 and non-zero if it is false. The return code would be non-zero in the case because the error.txt is empty since the .java files were successfully compiled without any errors.
+The ```[ -s error.txt ]``` command in the first line checks whether the size of ```error.txt``` is > 0 bytes, if it is true then its return code would be 0 and non-zero if it is false. The return code would be non-zero in the case because the ```error.txt``` is empty since the ```.java``` files were successfully compiled without any errors.
 
 ```
 if [[ $? -eq 0 ]]
@@ -117,7 +117,7 @@ else
   java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples > output.txt
 fi
 ```
-The if condition ```[[ $? -eq 0 ]]```in the first line is evaluated to be false in the case, since ```-eq``` checks whether the two sides are equal while the exit code from ```[ -s error.txt ]``` was non-zero and stored in ```$?```. Therefore the if statement goes into the else statement block in the fifth line. Then the ```java``` command in the sixth line runs the Junit test in the TestListExample.java file and redirects the stdout to output.txt by the command ```> output.txt```. The third and fourth line in the then statement block does not run because the if condition in the first line was evaluated as false.
+The if condition ```[[ $? -eq 0 ]]```in the first line is evaluated to be false in the case, since ```-eq``` checks whether the two sides are equal while the exit code from ```[ -s error.txt ]``` was non-zero and stored in the ```$?```. Therefore the if statement goes into the else statement block in the fifth line. Then the ```java``` command in the sixth line runs the Junit test in the ```TestListExample.java``` file and redirects the stdout to ```output.txt``` by the command ```> output.txt```. The third and fourth line in the then statement block does not run because the if condition in the first line was evaluated as false.
 
 ```
 filter_tests=$(grep -c "testFilter" TestListExamples.java)
@@ -142,12 +142,12 @@ This ```grep -c``` command counts the occurrence of ```TestListExamples.testMerg
 ```
 filter_passed=$(echo "$filter_tests-$filter_failed" | bc)
 ```
-This ```echo "$filter_tests-$filter_failed" | bc``` command calculates filter_tests - filter_failed using the command line calculator and stores the stdout into the variable ```filter_passed```.
+This ```echo "$filter_tests-$filter_failed" | bc``` command calculates ```filter_tests - filter_failed``` using the command line calculator and stores the stdout into the variable ```filter_passed```.
 
 ```
 merge_passed=$(echo "$merge_tests-$merge_failed" | bc)
 ```
-This ```echo "$merge_tests-$merge_failed" | bc``` command calculates merge_tests - merge_failed using the command line calculator and stores the stdout into the variable ```merge_passed```.
+This ```echo "$merge_tests-$merge_failed" | bc``` command calculates ```merge_tests - merge_failed``` using the command line calculator and stores the stdout into the variable ```merge_passed```.
 
 ```
 filter_failed_tests=$(grep " testFilter" output.txt)
