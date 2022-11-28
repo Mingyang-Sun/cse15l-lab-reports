@@ -61,12 +61,10 @@ fi
 ```
 
 ### student submissions 1:
-```https://github.com/ucsd-cse15l-f22/list-methods-lab3 ```
 which has the same code as the starter from lab 3
 ![image](images/LabReport5_1.png)
 
 ### student submissions 2:
-```https://github.com/ucsd-cse15l-f22/list-methods-corrected ```
 which has the methods corrected
 ![image](images/LabReport5_2.png)
 
@@ -182,6 +180,5 @@ fi
 The first two ```echo``` commands print out the result of how many tests for the merge() method was passed and failed. The ```echo``` commands in the fifth and sixth line do not run because the if condition ```! [[ merge_failed -eq 0 ]]``` was evaluated to be false since there are no failed tests in the case so the merge_failed stores a value of 0.
 
 ### student submissions 3:
-```https://github.com/ucsd-cse15l-f22/list-methods-compile-error```
 which has a syntax error of a missing semicolon
 ![image](images/LabReport5_3.png)
